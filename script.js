@@ -38,11 +38,51 @@ var jokes = [
     joke:"What happens when a cow laughs?",
     answer:"Milk comes out of its nose",
     keyWords:"milk"
+  },
+  {
+    joke:"What do you call a cow in an earthquake?",
+    answer:"A milkshake!",
+    keyWords:"milkshake"
+  },
+  {
+    joke:"What do you call it when one cow spies on another cow?",
+    answer:"A steak out",
+    keyWords:"steak out"
+  },
+  {
+    joke:"How do farmers count their cows?",
+    answer:"They use a cowculator!",
+    keyWords:"cowculator"
+  },
+  {
+    joke:"What happens when you talk to a cow?",
+    answer:"It goes in one ear and out the udder",
+    keyWords:"out the udder"
+  },
+  {
+    joke:"Why did the two cows hate each other?",
+    answer:"They had beef",
+    keyWords:"beef"
+  },
+  {
+    joke:"What did the bull say to his son when he was going off to school?",
+    answer:"Bison!",
+    keyWords:"bison"
+  },
+  {
+    joke:"Why do cows wear bells?",
+    answer:"Their horns don't work.",
+    keyWords:"horns"
+  },
+  {
+    joke:"What are cow knees called?",
+    answer:"Burger joints.",
+    keyWords:"burger joints"
   }
     ];
 
 function tellJoke(){
-  var randomJoke = Math.round(Math.random() * 8);
+  var randomJoke = Math.round(Math.random() * jokes.length);
   if(confirm("Hello, wanna hear a joke?")){
     var answer = jokes[randomJoke].answer;
     var response = prompt(jokes[randomJoke].joke);
