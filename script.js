@@ -22,7 +22,7 @@ var jokes = [
   {
     joke:"Why did the cow jump over the moon?",
     answer:"Because the farmer's hands were cold",
-    keyWords:"farmer's hands were cold"
+    keyWords:"cold"
   },
   {
     joke:"What does a farmer talk about when she’s milking a cow?",
