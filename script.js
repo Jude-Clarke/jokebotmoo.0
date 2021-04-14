@@ -102,7 +102,7 @@ function tellJoke(){
     } else {
       skill -=1;
 //       if((response.toLowerCase().includes("why")) || response.toLowerCase().includes("idk") === false) || response.toLowerCase().includes("don't know") === false){
-//         alert("Wrong!");
+        alert("Wrong!");
 //       }
       alert(answer);
     }
