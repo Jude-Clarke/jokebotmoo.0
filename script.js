@@ -81,6 +81,11 @@ var jokes = [
   }
     ];
 
+var skill = 0;
+respect = ["You win. You know everything!", "I give up. How do you know all of these?", "There's no way you're not hacking!", "Kinda sus how you knew that one."]
+var defeat;
+var correct;
+
 function tellJoke(){
   var randomJoke = Math.round(Math.random() * jokes.length);
   if(confirm("Hello, wanna hear a joke?")){
@@ -88,9 +93,15 @@ function tellJoke(){
     var response = prompt(jokes[randomJoke].joke);
     var keyWords = jokes[randomJoke].keyWords;
     if(response.toLowerCase().includes(answer.toLowerCase()) || response.toLowerCase().includes(keyWords.toLowerCase())){
-      alert("That's right! How did you know?");
+      defeat = respect[Math.round(Math.random() * respect.length)];
+      correct = ["That's right! How did you know?", "Again? You gotta be kidding me!", "Hey, you're pretty good at this!", "Ok, you must be hacking.", "HACKER!", defeat];
+      alert(correct[skill]);
+      if(skill < correct.length -1){
+        skill += 1;
+      };
     } else {
-      alert("Wrong!")
+      skill -=1;
+      alert("Wrong!");
       alert(answer);
     }
   }
