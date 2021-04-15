@@ -101,11 +101,11 @@ function begin(){
 };
 
   function tellJoke(){
-     do {
-       var randomJoke = Math.round(Math.random() * jokes.length);
-     }
-     while(randomJoke === prevJoke);
-   };
+    do {
+      var randomJoke = Math.round(Math.random() * jokes.length);
+    }
+    while(randomJoke === prevJoke);
+    
     var answer = jokes[randomJoke].answer;
     var response = prompt(jokes[randomJoke].joke);
     var keyWords = jokes[randomJoke].keyWords;
