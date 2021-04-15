@@ -88,7 +88,6 @@ var correct;
 var firstClick = true;
 
 function begin(){
-  var randomJoke = Math.round(Math.random() * jokes.length);
   if(firstClick){
      if(confirm("Hello, wanna hear a joke?")){
       firstClick = false;
@@ -100,6 +99,7 @@ function begin(){
 };
 
   function tellJoke(){
+    var randomJoke = Math.round(Math.random() * jokes.length);
     var answer = jokes[randomJoke].answer;
     var response = prompt(jokes[randomJoke].joke);
     var keyWords = jokes[randomJoke].keyWords;
