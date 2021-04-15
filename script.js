@@ -100,7 +100,7 @@ function tellJoke(){
         skill += 1;
       };
     } else {
-      if(!response.toLowerCase().includes("idk") || !response.toLowerCase().includes("why")){
+      if((!response.toLowerCase().includes("idk") || !response.toLowerCase().includes("why")) || !response.toLowerCase().includes("t know")){
          alert("Wrong!");
          };
       skill -=1;
