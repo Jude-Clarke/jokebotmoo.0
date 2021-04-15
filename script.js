@@ -12,7 +12,7 @@ var jokes = [
   {
     joke:"How do you get a cow with no legs?",
     answer:"Cut its legs off",
-    keyWords:"cut her legs off"
+    keyWords:"cut"
   },
   {
     joke:"Why do cows have hooves instead of feet?",
