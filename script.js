@@ -85,13 +85,13 @@ var skill = 0;
 respect = ["You win. You know everything!", "I give up. How do you know all of these?", "There's no way you're not hacking!", "Kinda sus how you knew that one."]
 var defeat;
 var correct;
-var new = true;
+var firstClick = true;
 
 function begin(){
   var randomJoke = Math.round(Math.random() * jokes.length);
-  if(new){
+  if(firstClick){
      if(confirm("Hello, wanna hear a joke?")){
-      new = false;
+      firstClick = false;
       tellJoke();
     }
   } else {
