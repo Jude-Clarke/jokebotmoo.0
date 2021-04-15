@@ -84,6 +84,7 @@ var jokes = [
 var skill = 0;
 respect = ["You win. You know everything!", "I give up. How do you know all of these?", "There's no way you're not hacking!", "Kinda sus how you knew that one."]
 var defeat;
+var prevDefeat;
 var correct;
 var firstClick = true;
 var randomJoke = 0;
@@ -110,9 +111,13 @@ function begin(){
     var response = prompt(jokes[randomJoke].joke);
     var keyWords = jokes[randomJoke].keyWords;
     if(response.toLowerCase().includes(answer.toLowerCase()) || response.toLowerCase().includes(keyWords.toLowerCase())){
-      defeat = respect[Math.round(Math.random() * respect.length)];
+      do{
+        defeat = respect[Math.round(Math.random() * respect.length)];
+      }
+      while(defeat === prevDefeat);
       correct = ["That's right! How did you know?", "Again? You gotta be kidding me!", "Hey, you're pretty good at this!", "Ok, you must be hacking.", "HACKER!", defeat];
       alert(correct[skill]);
+      prevDefeat = defeat;
       if(skill < correct.length -1){
         skill += 1;
       };
