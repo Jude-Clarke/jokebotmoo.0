@@ -86,6 +86,8 @@ respect = ["You win. You know everything!", "I give up. How do you know all of t
 var defeat;
 var correct;
 var firstClick = true;
+var randomJoke = 0;
+var prevJoke = 0;
 
 function begin(){
   if(firstClick){
@@ -99,7 +101,11 @@ function begin(){
 };
 
   function tellJoke(){
-    var randomJoke = Math.round(Math.random() * jokes.length);
+     do {
+       var randomJoke = Math.round(Math.random() * jokes.length);
+     }
+     while(randomJoke === prevJoke);
+   };
     var answer = jokes[randomJoke].answer;
     var response = prompt(jokes[randomJoke].joke);
     var keyWords = jokes[randomJoke].keyWords;
