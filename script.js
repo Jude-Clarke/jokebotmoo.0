@@ -100,10 +100,10 @@ function tellJoke(){
         skill += 1;
       };
     } else {
+      if(!response.toLowerCase().includes("idk") || !response.toLowerCase().includes("why"){
+         alert("Wrong!");
+         };
       skill -=1;
-//       if((response.toLowerCase().includes("why")) || response.toLowerCase().includes("idk") === false) || response.toLowerCase().includes("don't know") === false){
-        alert("Wrong!");
-//       }
       alert(answer);
     }
   }
