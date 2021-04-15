@@ -85,10 +85,21 @@ var skill = 0;
 respect = ["You win. You know everything!", "I give up. How do you know all of these?", "There's no way you're not hacking!", "Kinda sus how you knew that one."]
 var defeat;
 var correct;
+var new = true;
 
-function tellJoke(){
+function begin(){
   var randomJoke = Math.round(Math.random() * jokes.length);
-  if(confirm("Hello, wanna hear a joke?")){
+  if(new){
+     if(confirm("Hello, wanna hear a joke?")){
+      new = false;
+      tellJoke();
+    }
+  } else {
+    tellJoke();
+  }
+};
+
+  function tellJoke(){
     var answer = jokes[randomJoke].answer;
     var response = prompt(jokes[randomJoke].joke);
     var keyWords = jokes[randomJoke].keyWords;
@@ -107,7 +118,7 @@ function tellJoke(){
       alert(answer);
     }
   }
-};
+
 
 // tellJoke();
 
