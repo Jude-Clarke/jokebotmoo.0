@@ -118,7 +118,7 @@ function begin(){
       correct = ["That's right! How did you know?", "Again? You gotta be kidding me!", "Hey, you're pretty good at this!", "Ok, you must be hacking.", "HACKER!", defeat];
       alert(correct[skill]);
       prevDefeat = defeat;
-      if(skill < correct.length    h){
+      if(skill < correct.length){
         skill += 1;
       };
     } else {
